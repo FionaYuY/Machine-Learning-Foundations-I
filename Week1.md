@@ -51,18 +51,19 @@
    - 顧客資料: age, gender, annual salary, year in residence, year in job, current debt...
    - pattern to be learned: approve credit card good for bank?B
 2. Basic Notations
+
 ![01_handout_page-0022](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/70ec3568-f7ce-4e9f-95df-22323303810c)
-  - input x: 申請人的相關資料
-  - output y: 發卡後的結果(good/bad)
-  - **Target funcion** f: X -> Y 電腦要學習的【未知】pattern
-  - Training examples(以前的資料): `D = {(x_1,y_1),(x_2,y_2),...,(x_n,y_n)}`
-  - **hypothesis** g: X -> Y 電腦學習到的函數。希望g和f越像越好。
+   - input x: 申請人的相關資料
+   - output y: 發卡後的結果(good/bad)
+   - **Target funcion** f: X -> Y 電腦要學習的【未知】pattern
+   - Training examples(以前的資料): `D = {(x_1,y_1),(x_2,y_2),...,(x_n,y_n)}`
+   - **hypothesis** g: X -> Y 電腦學習到的函數。希望g和f越像越好。
 ![01_handout_page-0024](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/56ed369c-9636-4bc4-928f-8e9337cb632f)
-  - **learning algorithm** A 機器學習演算法要做的事情便是從他看到的資料中，從hypothesis set(H)裡選一個最好的出來
-  - **hypothesis set** H 各種可能的hypothesis (h)
-  - 機器學習模型指的是learning algotithm和她使用的hypothesis set
+   - **learning algorithm** A 機器學習演算法要做的事情便是從他看到的資料中，從hypothesis set(H)裡選一個最好的出來
+   - **hypothesis set** H 各種可能的hypothesis (h)
+   - 機器學習模型指的是learning algotithm和她使用的hypothesis set
 3. 機器學習
-  - 從data中算出一個hypothesis(g)，期望g很接近f
+   - 從data中算出一個hypothesis(g)，期望g很接近f
 
 ## Machine Learning and Other Fields
 1. 機器學習: 希望用資料去找出一個hypothesis g，期望g和目標f很接近
