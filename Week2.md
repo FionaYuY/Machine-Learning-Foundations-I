@@ -69,16 +69,13 @@
 
 ![02_handout_page-0028](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/4b8b722e-a418-4905-b585-32c6bb9bd836)
 
-6. 上式相關證明
-
-![02e_handout_page-0002](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/44406722-aeae-4ab8-8d82-cd06efe21f06)
-![02e_handout_page-0003](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/78b9ddc9-9347-4702-8d41-a411dcde0ea4)
-![02e_handout_page-0004](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/5a3745af-b172-4549-bf73-7fd21d05ef0c)
-
 8. PLA要更新幾次才會停下來?
    - $\rho$ 就是目標那條線的法向量。如果是線性可分，則 $\rho$ 一定大於0 
 
 ![02_handout_page-0030](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/dee3b24c-7f86-4613-90e3-8e25810a9635)
+![02e_handout_page-0002](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/44406722-aeae-4ab8-8d82-cd06efe21f06)
+![02e_handout_page-0003](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/78b9ddc9-9347-4702-8d41-a411dcde0ea4)
+![02e_handout_page-0004](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/5a3745af-b172-4549-bf73-7fd21d05ef0c)
 
 ## Non-Separble Data
 1. 上一個section證明了PLA會停，如果資料線性可分，PLA每次挑一個錯誤來修正，總結來說有兩點
