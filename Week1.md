@@ -16,9 +16,10 @@
    - Data -> Machine Learning -> Skill
 3. What is 'skill'?
    - 技巧想要做的便是增進某一種東西的表現
-   - 因此，機器學習的過程即為 Data -> ML -> improved performance measure
+   - 因此，機器學習的過程即為 Data -> ML -> improved performance measure。
+   - 因此，機器學習便是: improving some performance measure machine learning: with experience computed from data
 4. ML is an alternative route to build complicated systems
-   - 有些情況下我們很難用城市定義機器需要做的事(ex:辨別一棵樹)，機器學習便是讓機器自己去分析資料、自己學會
+   - 有些情況下我們很難用程式定義機器需要做的事(ex:辨別一棵樹)，機器學習便是讓機器自己去分析資料、自己學會
 5. 什麼時候可以使用機器學習
    - When human cannot program the system manually
    - When human cannot define the solution easily
@@ -33,7 +34,9 @@
 8. 根據Courera上的資訊(https://www.coursera.org/articles/what-is-machine-learning)
    機器學習的定義為:
    
-```Machine learning is a subfield of artificial intelligence (AI) that uses algorithms trained on data sets to create self-learning models that are capable of predicting outcomes and classifying information without human intervention. Machine learning is used today for a wide range of commercial purposes, including suggesting products to consumers based on their past purchases, predicting stock market fluctuations, and translating text from one language to another. ```
+```
+Machine learning is a subfield of artificial intelligence (AI) that uses algorithms trained on data sets to create self-learning models that are capable of predicting outcomes and classifying information without human intervention. Machine learning is used today for a wide range of commercial purposes, including suggesting products to consumers based on their past purchases, predicting stock market fluctuations, and translating text from one language to another.
+```
 
 ## Applications of Machine Learning
 1. 機器學習的應用
@@ -53,24 +56,24 @@
 ## Components of Machine Learning
 1. 情境:銀行該不該發信用卡給某一位客戶
    - 顧客資料: age, gender, annual salary, year in residence, year in job, current debt...
-   - pattern to be learned: approve credit card good for bank?B
+   - pattern to be learned: approve credit card good for bank?
 2. Basic Notations
 
 ![01_handout_page-0022](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/70ec3568-f7ce-4e9f-95df-22323303810c)
-   - input x: 申請人的相關資料
-   - output y: 發卡後的結果(good/bad)
-   - **Target funcion** f: X -> Y 電腦要學習的【未知】pattern
-   - Training examples(以前的資料): `D = {(x_1,y_1),(x_2,y_2),...,(x_n,y_n)}`
-   - **hypothesis** g: X -> Y 電腦學習到的函數。希望g和f越像越好。
+   - input $x$ : 申請人的相關資料
+   - output $y$ : 發卡後的結果(good/bad)
+   - **Target funcion** $f: \mathcal{X} \rightarrow \mathcal{Y} \text{ ('learned' formula to be used)}$ 電腦要學習的【未知】pattern
+   - Training examples(以前的資料): $D = \{ (x_1, y_1), (x_2, y_2), \ldots, (x_N, y_N) \} \text{ (historical records in bank)}$
+   - **hypothesis** $g: \mathcal{X} \rightarrow \mathcal{Y}$ 電腦學習到的函數。希望 $g$ 和 $f$ 越像越好。
 ![01_handout_page-0024](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/56ed369c-9636-4bc4-928f-8e9337cb632f)
-   - **learning algorithm** A 機器學習演算法要做的事情便是從他看到的資料中，從hypothesis set(H)裡選一個最好的出來
-   - **hypothesis set** H 各種可能的hypothesis (h)
+   - **learning algorithm** $A$ 機器學習演算法要做的事情便是從他看到的資料中，從hypothesis set( $H$ )裡選一個最好的出來
+   - **hypothesis set** $H$ 各種可能的hypothesis ( $h$ )
    - 機器學習模型指的是learning algotithm和她使用的hypothesis set
 3. 機器學習
-   - 從data中算出一個hypothesis(g)，期望g很接近f
+   - 從data中算出一個hypothesis( $g$ )，期望 $g$ 很接近 $f$
 
 ## Machine Learning and Other Fields
-1. 機器學習: 希望用資料去找出一個hypothesis g，期望g和目標f很接近
+1. 機器學習: 希望用資料去找出一個hypothesis $g$ ，期望 $g$ 和目標 $f$ 很接近
 2. 資料探勘: 希望能夠用資料找出一些有用的事情、性質(ex:關聯性)
    - 傳統的資料探勘中，希望在很多的資料當中，還能夠很有效率的計算
 3. 人工智慧: 希望電腦做出某種東西，呈現出一些聰明的表現(ex:自動駕駛、下棋)
