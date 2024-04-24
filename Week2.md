@@ -80,9 +80,9 @@
 證明過程:
 1. 本證明所需的兩個公式
 - $w_f$ 和 $w_t$ 的內積公式
-  $$w_f^T w_{t+1} \geq w_f^T w_t + \min_n y_n w_f^T x_n$$
+  $$w_f^T w_{t+1} \geq w_f^T w_t + \min_n y_n w_f^T x_n =  w_f^T w_t + \rho$$
 - $w_t$ 的長度變化公式
-  $$\| w_{t+1} \|^2 \leq \| w_t \|^2 + \max_n \| x_n \|^2$$
+  $$\| w_{t+1} \|^2 \leq \| w_t \|^2 + \max_n \| x_n \|^2 = \| w_t \|^2 + R^2$$
 2. 初始化
    $$w_0 = 0$$
 3. 先從內積公式開始
