@@ -38,18 +38,17 @@
 更新規則： $\mathbf{w}_{t+1} \leftarrow \mathbf{w}_t + y_n$
 將之左右乘上 $x_n y_n$ 即可推出 (請看下圖)
 
-![02_handout_page-0036](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/97d125a4-5da3-473a-b141-12ac53d62bd3)
 ![02_handout-25](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/f9b73fe9-8a6a-4174-916f-6ae9306b9fab)
 
 ## Guarantee of PLA
 1. PLA 什麼時候停止?要達到停止，必需條件是要有一條直線可以切開資料-> Linear Separability
 2. 假設有一條線是linear separable，PLA一定會停止嗎?
-   - 目標函數 $w_f$ :目標的那條線，該線會滿足 $y_n = \text{sign}(w_f^T x_n)$ ，也就是說正的都會在正的這一邊，父的都會在負的那一邊
+   - 目標函數 $w_f$ :目標的那條線，該線會滿足 $y_n = \text{sign}(w_f^T x_n)$ ，也就是說正的都會在正的這一邊，負的都會在負的那一邊
    - $w_f$ 是完美的，所以每個 $x_n$ 都會正確的遠離線 $\min_{n} y_n w_f^T x_n > 0$
    - 當進行PLA時，選到的某一個錯誤的點也會滿足這樣的性質(因為 $w_f$ 是完美的): $y_{n(t)} w_f^T x_{n(t)} \geq \min_{n} y_n w_f^T x_n > 0$
-   - 以上述兩點基礎，我們進一步看到 $w_f$ 跟我們PLA在找的 $w_t$ 到底接不接近 -> 衡量兩個向量的方式中，其中一種就是內積，內積越大越接近
+   - 以上述兩點基礎，我們進一步看到 $w_f$ 跟我們PLA在找的 $w_t$ 到底接不接近 -> 衡量兩個向量是否接近的方式中，其中一種就是內積，內積越大越接近
    - 因此更新後可得， $w_f^T w_{t+1} = w_f^T ( w_t + y_{n(t)} x_{n(t)} )$
-   - 展開後，並帶入上面的基礎可得， $w_f^T w_{t+1} \geq w_f^T w_t + \min_{n} y_n w_f^T x_n$
+   - 展開後， $w_f^T w_{t+1} \geq w_f^T w_t + y_n w_f^T x_n$ ，代入上面可得， $w_f^T w_{t+1} \geq w_f^T w_t + \min_{n} y_n w_f^T x_n$
    - 最後可得 $w_f^T w_{t+1} > w_f^T w_t + 0$
    - 也就是說 $w_f$ 和 $w_t$ 的內積會越來越大->越來越接近(前提是長度是一樣的情況下，下一段討論)
 
