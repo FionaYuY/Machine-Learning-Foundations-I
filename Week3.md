@@ -24,3 +24,5 @@
 
 ![03_handout_page-0010](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/18a05b39-3247-4f62-b93f-693363c4e528)
 
+##  Learning with Different Data Label
+1. 
