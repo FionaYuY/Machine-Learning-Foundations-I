@@ -30,6 +30,9 @@
    - exists some 'underlying pattern' to be learned
    - but no programmable (easy) definition
    - somehow there is data about the pattern
+8. 根據Courera上的資訊(https://www.coursera.org/articles/what-is-machine-learning)，機器學習的定義為
+   
+```Machine learning is a subfield of artificial intelligence (AI) that uses algorithms trained on data sets to create self-learning models that are capable of predicting outcomes and classifying information without human intervention. Machine learning is used today for a wide range of commercial purposes, including suggesting products to consumers based on their past purchases, predicting stock market fluctuations, and translating text from one language to another. ```
 
 ## Applications of Machine Learning
 1. 機器學習的應用
