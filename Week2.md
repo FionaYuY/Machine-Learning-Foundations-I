@@ -100,7 +100,7 @@
    由以上可以得知，每一次更新最多成長 $R^2$ ，因此可以知道修正T次後，最多成長 $TR^2$
    $$\|| w_T \||^2 \leq T R^2$$
 5. 根據柯西不等式( $\left| \langle \mathbf{a}, \mathbf{b} \rangle \right| \leq \| \mathbf{a} \| \| \mathbf{b} \|$ )
-   可以將  $$w_f^T w_T \geq 0 + T \rho = T \rho$$ 轉換成
+   可以將  $$w_f^T w_T \geq T \rho$$ 轉換成
    $$T \rho \leq \|| w_f \|| \|| w_T \||$$
    平方後可得
    $$(T \rho)^2 \leq (\|| w_f \|| \|| w_T \||)^2$$
@@ -122,7 +122,7 @@
 ![02_handout_page-0032](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/2d593d42-fd31-49ec-a355-ab33c4209d1e)
 
 4. 有沒有辦法在資料不是線性可分，或是有雜訊的狀況下，還是找到一條好的線
-   - 大部分的情況下，假訊相對是小的，通常y跟f要有一定對應程度， $y_n = f(x_n)$
+   - 大部分的情況下，雜訊相對是小的，通常 $y$ 跟 $f$ 要有一定對應程度， $y_n = f(x_n)$
    - 如果要在資料 $D$ 找一個跟 $f$ 很相像的 $g$ ，也應該要滿足 $y_n = g(x_n)$
    - 也就是說，我們要找一條犯的錯誤最小的線g， $w_g \leftarrow \argmin_w \sum_{n=1}^{N} |y_n \neq \text{sign}(w^T x_n)|$  --> 是一個NP-hard的問題
    - 我們沒辦法找到那條最完美的線，所以嘗試找尋一條【還不錯】的線，其中一個方法【pocket algorithm】
@@ -132,7 +132,7 @@
 5. pocket algotithm
    - 可以看做PLA的變形
    - 【keeping best weights in pocket】
-   - 會用較隨機的更新方式，因為想要找到的線能有多一點不一樣的地方，看能不能找到一條比較好的線
+   - 會用較隨機的更新方式，因為希望找到的線能有多一點不一樣的地方，看能不能找到一條比較好的線
    - 跟PLA不同之處為，每次找到一條新的線，比較新的線與口袋的線哪一條比較好(犯的錯較少)，如果新的線較好，就將口袋裡的線丟掉，放新的線在口袋裡。跑得夠多了，看夠多的線了，就讓他停下來。
 
 ![02_handout_page-0034](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/a7c7d452-ad5b-43dd-a940-6a1669beff7f)
