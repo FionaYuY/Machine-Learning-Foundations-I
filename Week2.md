@@ -69,9 +69,50 @@
 ![02_handout_page-0028](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/4b8b722e-a418-4905-b585-32c6bb9bd836)
 
 6. PLA要更新幾次才會停下來?
-   - $\rho $ 就是目標那條線的法向量。如果是線性可分，則 $\rho$ 一定大於0 
+   - $\rho$ 就是目標那條線的法向量。如果是線性可分，則 $\rho$ 一定大於0 
 
 ![02_handout_page-0030](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/dee3b24c-7f86-4613-90e3-8e25810a9635)
+
+## Non-Separble Data
+1. 上一個section證明了PLA會停，如果資料線性可分，PLA每次挑一個錯誤來修正，總結來說有兩點
+   - 線性可分代表， $w_f$ 和 $w_t$ 越來越接近
+   - 用錯誤來修正代表， $w_t$ 的長度會緩慢的成長
+2. PLA
+   - 優點: 很簡單、可用於任何dimension
+   - 缺點:
+     + 需要假設資料是線性可分的，因此拿到資料時，其實不能確定PLA能不能停
+     + 多久會停下來? $\frac{R^2}{\rho^2}$ ，但 $\rho$ 是用 $w_f$ 算出來的，但 $w_f$ 未知。
+     + 因此，實務上，不知道PLA會不會停，也不知道多久會停
+3. 有時候資料中會有雜訊，也就代表拿到的資料不見得是【線性可分】。
+   
+![02_handout_page-0032](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/2d593d42-fd31-49ec-a355-ab33c4209d1e)
+
+4. 有沒有辦法在資料不是線性可分，或是有雜訊的狀況下，還是找到一條好的線
+   - 大部分的情況下，假訊相對是小的，通常y跟f要有一定對應程度， $y_n = f(x_n)$
+   - 如果要在資料 $D$ 找一個跟 $f$ 很相像的 $g$ ，也應該要滿足 $y_n = g(x_n)$
+   - 也就是說，我們要找一條犯的錯誤最小的線g， $w_g \leftarrow \argmin_w \sum_{n=1}^{N} |y_n \neq \text{sign}(w^T x_n)|$  --> 是一個NP-hard的問題
+   - 我們沒辦法找到那條最完美的線，所以嘗試找尋一條【還不錯】的線，其中一個方法【pocket algorithm】
+
+![02_handout_page-0033](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/950511ca-e76f-4288-be6d-b3ca81f847bd)
+
+5. pocket algotithm
+   - 可以看做PLA的變形
+   - 【keeping best weights in pocket】
+   - 會用較隨機的更新方式，因為想要找到的線能有多一點不一樣的地方，看能不能找到一條比較好的線
+   - 跟PLA不同之處為，每次找到一條新的線，比較新的線與口袋的線哪一條比較好(犯的錯較少)，如果新的線較好，就將口袋裡的線丟掉，放新的線在口袋裡。跑得夠多了，看夠多的線了，就讓他停下來。
+
+![02_handout_page-0034](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/a7c7d452-ad5b-43dd-a940-6a1669beff7f)
+
+6. 問題
+
+![02_handout_page-0036](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/0dfa423e-bd4d-4fdf-9a2c-00221493e468)
+
+
+
+
+
+
+
 
 
 
