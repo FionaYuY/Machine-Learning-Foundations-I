@@ -10,7 +10,7 @@
 2. $h(x)$
 
 ![02_handout_page-0005](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/f8983013-8f80-4831-9d35-a588cb670ee9)
-  - 將門檻值也當成一個 $W \to W_0 \times X_0$
+  - 將門檻值也當成一個 $w \to w_0 \times x_0$ ， $w_0$ 為門檻值(要學習的)、 $x_0$ 為1。
 ![02_handout_page-0006](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/2110ff33-4e25-4866-8a87-46fc3fb208ff)
   - perceptron 即為平面上一條一條的線，所以有時又會稱為【linear classifiers】
 ## Perceptron Learning Algorithm
@@ -20,7 +20,7 @@
    - 思路: 隨機取一條線，慢慢去移動、修正
 2. Perceptron Learning Algorithm
    - 一輪一輪( $t$ )的去做修正
-   - 在某一輪中，該條線在某一個點 $w_t$ 犯了錯 -> 修正
+   - 在某一輪中，該條線在某一個點 $(x_{n(t)}, y_{n(t)})$ 犯了錯 -> 修正 $w_t$
    - 怎麼修正?
      + if實際符號為正，但它跟我說是負的，代表 $w$ 跟 $x$ 的角度太大。修正方式就是把 $w+x$，將之轉回來。
      + if實際符號為負，但他跟我說是正的，代表 $w$ 跟 $x$ 的角度太小。修正方式是 $w-x$ ，將之轉開。
