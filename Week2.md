@@ -5,12 +5,12 @@
 1. 怎麼判定該不該發信用卡給某位客戶?
    - 將每一個使用者用一個向量表示，每一個維度代表某一種feature，將維度綜合計算出score
    - 如果score超過某一個標準，就發給他。
-   - 總結: 讓電腦算出score後，減掉所設定的標準。若結果是正，則代表好(+1)。若結果為負，則代表不好(-1) --> $\mathcal{Y}: \{ +1 (\text{good}), -1 (\text{bad}) \}$
+   - 總結: 讓電腦算出score後，減掉所設定的門檻。若結果是正，則代表好(+1)。若結果為負，則代表不好(-1) --> $\mathcal{Y}: \{ +1 (\text{good}), -1 (\text{bad}) \}$
    - $h(x)$ : perceptron 感知器
 2. $h(x)$
 
 ![02_handout_page-0005](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/f8983013-8f80-4831-9d35-a588cb670ee9)
-  - 將門檻值也當成一個 $W \to W_0 \times W_0$
+  - 將門檻值也當成一個 $W \to W_0 \times X_0$
 ![02_handout_page-0006](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/2110ff33-4e25-4866-8a87-46fc3fb208ff)
   - perceptron 即為平面上一條一條的線，所以有時又會稱為【linear classifiers】
 ## Perceptron Learning Algorithm
