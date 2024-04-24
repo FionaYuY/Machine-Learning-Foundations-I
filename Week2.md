@@ -62,14 +62,20 @@
    - 跟最遠的點比較，可得 $\|w_{t+1}\|^2 \leq \|w_t\|^2 + \max_{n} \|y_n x_n\|^2$ ( $y_n$ 平方之後會是1，可省略)
    - 總結:每一次更新， $w_t$ 的長度最大就只會成長 $\max_{n} \|x_n\|^2$
 4. 結合2.( $w_f$ 和 $w_t$ 內積越來越大)和3.( $w_t$ 長度慢慢的長)，可以知道 $w_f$ 和 $w_t$ 越來越接近
-5. 結合起來，從 $w_0$ 開始，經過T次更新， $\frac{w_f^T w_T}{\|w_f\| \|w_T\|} \geq \sqrt{T} \cdot \text{constant}$
+5. 結合起來，從 $w_0$ 開始，經過T次更新， $\frac{w_f^T w_T}{\|w_f\| \|w_T\|} \geq \sqrt{T} \cdot \text{constant}$ (這邊的 $w_f^T$ 指的是 $w_f$ 的轉置矩陣)
    - 兩個正規化的向量的內積，角度會越來越靠近
    - 每更新一次就靠近一點，靠近的速度跟更新的次數成一個根號的比例
    - 會不會無限制靠近?不可能 -> 因為兩個向量最大內積為1，因此可以證明這個演算法會停下來
 
 ![02_handout_page-0028](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/4b8b722e-a418-4905-b585-32c6bb9bd836)
 
-6. PLA要更新幾次才會停下來?
+6. 上式相關證明
+
+![02e_handout_page-0002](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/44406722-aeae-4ab8-8d82-cd06efe21f06)
+![02e_handout_page-0003](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/78b9ddc9-9347-4702-8d41-a411dcde0ea4)
+![02e_handout_page-0004](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/5a3745af-b172-4549-bf73-7fd21d05ef0c)
+
+8. PLA要更新幾次才會停下來?
    - $\rho$ 就是目標那條線的法向量。如果是線性可分，則 $\rho$ 一定大於0 
 
 ![02_handout_page-0030](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/dee3b24c-7f86-4613-90e3-8e25810a9635)
