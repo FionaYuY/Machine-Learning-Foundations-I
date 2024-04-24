@@ -77,6 +77,36 @@
 ![02e_handout_page-0003](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/78b9ddc9-9347-4702-8d41-a411dcde0ea4)
 ![02e_handout_page-0004](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/5a3745af-b172-4549-bf73-7fd21d05ef0c)
 
+證明過程:
+1. 本證明所需的兩個公式
+- $w_f$ 和 $w_t$ 的內積公式
+  $$w_f^T w_{t+1} \geq w_f^T w_t + \min_n y_n w_f^T x_n$$
+- $w_t$ 的長度變化公式
+  $$\| w_{t+1} \|^2 \leq \| w_t \|^2 + \max_n \| x_n \|^2$$
+2. 初始化
+   $$w_0 = 0$$
+3. 先從內積公式開始
+   $$w_f^T w_1 \geq w_f^T w_0 + \rho = 0 + \rho$$
+   $$w_f^T w_2 \geq w_f^T w_1 + \rho$$
+   $$\vdots$$
+   $$w_f^T w_T \geq w_f^T w_{T-1} + \rho$$
+   由以上可以得知，每一次更新最少成長 $\rho$ ，因此可以知道修正T後，至少會成長 $T \rho$
+   $$w_f^T w_T \geq 0 + T \rho = T \rho$$
+4. 接著看長度公式
+   $$\|| w_1 \||^2 \leq \|| w_0 \||^2 + R^2 = 0 + R^2$$
+   $$\|| w_2 \||^2 \leq \|| w_1 \||^2 + R^2$$
+   $$\vdots$$
+   $$\|| w_{T+1} \||^2 \leq \|| w_T \||^2 + R^2$$
+   由以上可以得知，每一次更新最多成長 $R^2$ ，因此可以知道修正T次後，最多成長 $TR^2$
+   $$\|| w_T \||^2 \leq T R^2$$
+5. 根據柯西不等式( $\left| \langle \mathbf{a}, \mathbf{b} \rangle \right| \leq \| \mathbf{a} \| \| \mathbf{b} \|$ )
+   可以將  $$w_f^T w_T \geq 0 + T \rho = T \rho$$ 轉換成
+   $$T \rho \leq \|| w_f \|| \|| w_T \||$$
+   平方後可得
+   $$(T \rho)^2 \leq (\|| w_f \|| \|| w_T \||)^2$$
+   整理一下
+   $$T \leq \frac{\|| w_f \||^2 R^2}{\rho^2}$$
+   $$T \leq \frac{R^2}{\rho^2}$$
 ## Non-Separble Data
 1. 上一個section證明了PLA會停，如果資料線性可分，PLA每次挑一個錯誤來修正，總結來說有兩點
    - 線性可分代表， $w_f$ 和 $w_t$ 越來越接近
