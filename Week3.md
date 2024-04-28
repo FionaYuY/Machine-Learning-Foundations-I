@@ -1,4 +1,4 @@
-# Types of Learning
+    # Types of Learning
 ## Learning with Different Output Space
 1. binary classification 二元分類: $y = \lbrace -1, +1 \rbrace$ 
    - 是否發放信用卡
@@ -26,3 +26,20 @@
 
 ##  Learning with Different Data Label
 1. 
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
