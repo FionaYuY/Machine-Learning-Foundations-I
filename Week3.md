@@ -9,10 +9,10 @@
    - binary classification 是特例(當K=2)
    - 手寫字分類、圖片分類、信件分類等等
    - 很常被運用在視覺或聽覺的辨識
-3. Regression迴歸分析: $y \in \mathbb{R} \quad \text{or} \quad y \in [\text{lower}, \text{upper}] \subseteq \mathbb{R}$
+3. Regression 迴歸分析: $y \in \mathbb{R} \quad \text{or} \quad y \in [\text{lower}, \text{upper}] \subseteq \mathbb{R}$
    - 如果 $y$ 是有範圍的，則特稱為bounded regression
    - 股票預測、氣溫預測
-4. Strucuted Learning結構化的學習:較進階的問題，輸出空間有某一種結構在裡面。例如在自然語言辨識，寫出一段話時，能不能判斷每一個字的詞性
+4. Strucuted Learning 結構化的學習:較進階的問題，輸出空間有某一種結構在裡面。例如在自然語言辨識，寫出一段話時，能不能判斷每一個字的詞性
    - multiclass classification: word -> word class
    - 當輸入為一個sentence，輸出是一連串有【結構】的word class。ex: $y = \lbrace PVN, PVP, NVN, PV, \ldots\rbrace \text{, not including } VVVV$
    - 假設輸出為VVVVV(連續五個動詞)，就可以得知這個句子的文法錯誤
@@ -85,8 +85,11 @@
 ![03_handout_page-0027](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/9d741965-5f6a-4ec8-906a-5096ee3bf32c)
 
 
-7. 補充: 可參考此篇文章 https://medium.com/@kaojia/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%9203-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E7%A8%AE%E9%A1%9E-%E7%9B%A3%E7%9D%A3%E5%BC%8F%E5%AD%B8%E7%BF%92-%E9%9D%9E%E7%9B%A3%E7%9D%A3%E5%BC%8F%E5%AD%B8%E7%BF%92-%E6%89%B9%E6%AC%A1%E5%AD%B8%E7%BF%92-batch-learning-83d60fc861f9
+7. 補充
 
+   (1) https://medium.com/@kaojia/%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%9203-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E7%A8%AE%E9%A1%9E-%E7%9B%A3%E7%9D%A3%E5%BC%8F%E5%AD%B8%E7%BF%92-%E9%9D%9E%E7%9B%A3%E7%9D%A3%E5%BC%8F%E5%AD%B8%E7%BF%92-%E6%89%B9%E6%AC%A1%E5%AD%B8%E7%BF%92-batch-learning-83d60fc861f9
+
+   (2) https://medium.com/codeda/%E7%99%BE%E6%97%A5ml%E7%B3%BB%E5%88%97-%E4%B8%80-%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E6%A6%82%E8%AB%96-1-8a1429550a97
 ## Learning with Different Input Space
 1. Concrete features
    - 具體。從輸入X的角度而言，比較具體的資料，而且跟我們想要做的事情可能有一些關係。實際上他們代表一些已經經過處理的資訊，我們相信這些資訊可以跟我們想要輸出的是有一謝關係的。
