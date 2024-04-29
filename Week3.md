@@ -13,6 +13,7 @@
    - 如果 $y$ 是有範圍的，則特稱為bounded regression
    - 股票預測、氣溫預測
 4. Strucuted Learning 結構化的學習:較進階的問題，輸出空間有某一種結構在裡面。例如在自然語言辨識，寫出一段話時，能不能判斷每一個字的詞性
+   - Structured learning refers to a type of machine learning problem where the output is a structured object rather than a single label or a continuous value. Unlike standard classification or regression problems where the output is a single class label or a real number, structured learning deals with predicting entire structures.
    - multiclass classification: word -> word class
    - 當輸入為一個sentence，輸出是一連串有【結構】的word class。ex: $y = \lbrace PVN, PVP, NVN, PV, \ldots\rbrace \text{, not including } VVVV$
    - 假設輸出為VVVVV(連續五個動詞)，就可以得知這個句子的文法錯誤
@@ -25,8 +26,9 @@
 ![03_handout_page-0010](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/18a05b39-3247-4f62-b93f-693363c4e528)
 
 ##  Learning with Different Data Label
-1. 情境:收集一堆銅板，收集其重量、大小等等，丟進機器學習演算法，使其學習分出四個類別的銅板 -> 監督式學習 supervised learning
+1. 情境:收集一堆銅板，收集其重量、大小等等，丟進機器學習演算法，使其學習正確區分出四個類別的銅板 -> 監督式學習 supervised learning
    - 給銅板，也給答案
+   - supervised learning: every $x_n$ comes with corresponding $y_n$
 2. 如果不告訴機器銅板的分類和意義是什麼，機器將之歸類、分群 -> 分群 clustering, 非監督式學習 unsupervised learning
    - 分群的應用: 將網路上的文章自動分類到不同主題、把顧客分群做不同的促銷活動 
 
@@ -46,7 +48,7 @@
 5. Reinforcement Learning
    - 應用
      + 線上廣告系統:廣告系統藉由顧客資料呈現廣告，顧客有點進廣告、沒點進廣告的行為，會讓廣告系統學習如何更好的呈現廣告
-   - 通常學習動作會序列的發生，一筆一筆學
+   - 通常學習動作會序列化的發生，一筆一筆學
 
 ![03_handout_page-0016](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/d593b815-3b39-4b78-b01f-3bf86befee8d)
 ![03_handout_page-0017](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/a01fedb3-f8f5-4f57-bc5e-eefcb54c00a5)
@@ -60,14 +62,16 @@
 ![03_handout_page-0020](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/7c2b2d06-2867-450d-983c-29bcf0cdac3a)
 
 ## Learning with Different Protocol
-1. batch learning批次學習: 整批整批的將資料餵給演算法
+1. batch learning 批次學習: 整批整批的將資料餵給演算法
+   - In batch learning, the learning algorithm is provided with all available training data at once, which it uses to train the model. This is a one-off learning process: you train the model, and then you deploy it without any further learning or adjustment unless you retrain it on a new batch of data at a later point.
    - 像填壓式教育
    
 ![03_handout_page-0021](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/303ab668-e0d6-4c2d-a8f6-a16da16b7c84)
 ![03_handout_page-0022](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/86da26d0-7be3-4d1e-b253-942174202556)
 
 2. online learning 線上學習: 按順序一筆一筆來學習
-
+   - Online learning, also known as incremental learning, processes training data in a sequential manner, updating the model incrementally as new data comes in. This approach is useful when you have data streaming in continuously, or the dataset is too large to fit into memory all at once.
+     
 ![03_handout_page-0023](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/a4f0a6cb-87d0-4f5d-abd2-7bc078443b22)
 
 3. 不管是batch learning或是online learning，機器都是被動的。餵什麼資料進去，他就做什麼。另一種學習方法是: active learning主動學習 
@@ -93,7 +97,8 @@
 ## Learning with Different Input Space
 1. Concrete features
    - 具體。從輸入X的角度而言，比較具體的資料，而且跟我們想要做的事情可能有一些關係。實際上他們代表一些已經經過處理的資訊，我們相信這些資訊可以跟我們想要輸出的是有一謝關係的。
-   - 例如:在銅板分類的情境中，大小、重量；信用卡分發的情境中，顧客的資料；癌症診斷的情境中，病患的資料。通常這些資料中，都帶有著人類對於這些領域的了解(domain knowledge)。也就是說，我們將人類的專業作為預處理，思考後才去給機器做。這些對機器學習來說，是比較簡單的問題。
+   - 例如:在銅板分類的情境中，大小、重量；信用卡分發的情境中，顧客的資料；癌症診斷的情境中，病患的資料。
+   - 通常這些資料中，都帶有著人類對於這些領域的了解(domain knowledge)。也就是說，我們將人類的專業作為預處理，思考後才去給機器做。這些對機器學習來說，是比較簡單的問題。
 
 ![03_handout_page-0028](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/6b7a4d01-b3e3-4fff-901d-812254d11293)
 ![03_handout_page-0029](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/34079718-1cbf-4af4-9997-ec397d45a716)
