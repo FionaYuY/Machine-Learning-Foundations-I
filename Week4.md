@@ -22,13 +22,14 @@ Learning 是做得到?做不到? 若做不到，有沒有辦法加上一些條�
 ![04_handout_page-0010](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/4186e3a8-c16e-49a7-926c-a2624282fe8c)
 ![04_handout_page-0011](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/d8f09209-93ec-4f09-97d6-eea808d06a0c)
 
-2. Hoeffding's Inequality
+2. **Hoeffding's Inequality**
    - $\mu$ 是罐子中的比例， $v$ 是我們抽樣出的比例。我們抽出的數量為 $N$
    - 當 $N$ 很大， $v$ 和 $\mu$ 會很接近，在誤差 $\epsilon$ 以內。
-    $$\Pr[|\nu - \mu| \geq \varepsilon] \leq 2\exp(-2\varepsilon^2 N)$$
+     **$$\P[|\nu - \mu| \geq \varepsilon] \leq 2\exp(-2\varepsilon^2 N)$$**
    - 此不等式表示: 當 $N$ 很大的時候， $v$ 和 $\mu$ 會很接近
    - $v=\mu$ 這個statement是PAC (probably approximately correct)
    - larger sample size $N$ or looser gap $\epsilon$ 會有越高機率 $v \approx \mu$。也就是說，如果抽樣的樣本夠大的話，我們大概可以推論說這個 $\mu$ 的值跟我們抽樣出來的 $v$ 的值是類似的。
+   - 有關Hoeffding's Inequality 可參考: https://medium.com/機器學習基石系列/機器學習基石系列-1-hoffedings-inequality-c40c7a8f123d
    
 ![04_handout_page-0012](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/21b27ee1-df98-4b54-bcfd-c986e3188314)
 ![04_handout_page-0013](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/2a9189fb-0a07-4e7b-9906-a0321f9707ba)
