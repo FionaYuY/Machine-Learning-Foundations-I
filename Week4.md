@@ -75,6 +75,12 @@ Learning 是做得到?做不到? 若做不到，有沒有辦法加上一些條�
 
 ![04_handout_page-0022](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/950738e9-0b46-4ea8-8bea-eb0dba27631e)
 
+$\epsilon = 0.4 - 0.1 = 0.3$
+
+$N = 10$
+
+$2 e^{-2 \times 0.3^2 \times 10} = 0.33$
+
 ## Connection to Real Learning
 1. Problem: 當我們只有一個hypothesis，可以做verification。but if 當我們有很多hypothesis的時候，該怎麼辦?
 2. 以擲硬幣當作例子: 如果150人中有人連續5次投到正面，代表這一個銅板真的比其他銅板要好嗎(「好」代表更容易出現正面)? 不是的，因為150人中，至少有一個人擲中5次正面的機率高於99%。也就是說，當今天我選擇了丟了五次正面的，並且說這個銅板比較幸運(好)，其實並非是對的。
