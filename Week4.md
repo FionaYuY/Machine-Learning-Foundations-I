@@ -38,6 +38,12 @@ Learning 是做得到?做不到? 若做不到，有沒有辦法加上一些條�
 
 ![04_handout_page-0015](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/7fc8ea43-d3ec-44f6-8d43-8ab7ca7d3b90)
 
+   $\epsilon = 0.4 - 0.1 = 0.3$
+
+   $N = 10$
+
+   $2 e^{-2 \times 0.3^2 \times 10} = 0.33$
+
 ## Connection to Leanring
 1. 將剛剛彈珠的例子衍伸到learning的領域中
    - 左邊的彈珠例子可以一一對應到右邊learning的範疇中
@@ -74,12 +80,6 @@ Learning 是做得到?做不到? 若做不到，有沒有辦法加上一些條�
 5. 題目
 
 ![04_handout_page-0022](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/950738e9-0b46-4ea8-8bea-eb0dba27631e)
-
-   $\epsilon = 0.4 - 0.1 = 0.3$
-
-   $N = 10$
-
-   $2 e^{-2 \times 0.3^2 \times 10} = 0.33$
 
 ## Connection to Real Learning
 1. Problem: 當我們只有一個hypothesis，可以做verification。but if 當我們有很多hypothesis的時候，該怎麼辦?
