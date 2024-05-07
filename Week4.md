@@ -25,7 +25,7 @@ Learning 是做得到?做不到? 若做不到，有沒有辦法加上一些條�
 2. **Hoeffding's Inequality**
    - $\mu$ 是罐子中的比例， $v$ 是我們抽樣出的比例。我們抽出的數量為 $N$
    - 當 $N$ 很大， $v$ 和 $\mu$ 會很接近，在誤差 $\epsilon$ 以內。
-     **$$P[|\nu - \mu| \geq \varepsilon] \leq 2\exp(-2\varepsilon^2 N)$$**
+     **$$P[|\nu - \mu| \gt \varepsilon] \leq 2\exp(-2\varepsilon^2 N)$$**
    - 此不等式表示: 當 $N$ 很大的時候， $v$ 和 $\mu$ 會很接近
    - $v=\mu$ 這個statement是PAC (probably approximately correct)
    - larger sample size $N$ or looser gap $\epsilon$ 會有越高機率 $v \approx \mu$。也就是說，如果抽樣的樣本夠大的話，我們大概可以推論說這個 $\mu$ 的值跟我們抽樣出來的 $v$ 的值是類似的。
@@ -46,8 +46,10 @@ Learning 是做得到?做不到? 若做不到，有沒有辦法加上一些條�
 ![04_handout_page-0016](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/308db72d-c636-4c5b-be54-7a74333036a9)
 
 2. Added Components 
-   - $E_{out}(h) = \mathbb{E}_{x \sim P} \left[ h(x) \neq f(x) \right]$ : $E_{out}$ 相當於 $\mu$ (unknown)
-   - $E_{in}(h) = \frac{1}{N} \sum_{n=1}^{N} \left[ h(x_n) \neq y_n \right]$ :  $E_{in}$ 相當於 $v$
+   - $E_{out}(h) = \mathbb{E}_{x \sim P} \left[ h(x) \neq f(x) \right]$
+     + $E_{out}$  相當於 $\mu$ (unknown)
+   - $E_{in}(h) = \frac{1}{N} \sum_{n=1}^{N} \left[ h(x_n) \neq y_n \right]$
+     + $E_{in}$ 相當於 $v$
 
 ![04_handout_page-0017](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/c975fa9e-403c-4e94-beb1-8df95b381437)
 
