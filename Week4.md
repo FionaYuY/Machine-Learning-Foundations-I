@@ -47,7 +47,7 @@ Learning 是做得到?做不到? 若做不到，有沒有辦法加上一些條�
 ## Connection to Leanring
 1. 將剛剛彈珠的例子衍伸到learning的領域中
    - 左邊的彈珠例子可以一一對應到右邊learning的範疇中
-   - 如果 $N$ 夠大且資料 $x_n$ 是i.i.d (independent and identically distributed)的從 $X$ 取出來，我們大概可以說 $h$ 跟 $f$ 不一樣的機率到底是多少?
+   - 如果 **$N$ 夠大**且**資料 $x_n$ 是i.i.d (independent and identically distributed)的從 $X$ 取出來**，我們大概可以說 $h$ 跟 $f$ 不一樣的機率到底是多少
 
 ![04_handout_page-0016](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/308db72d-c636-4c5b-be54-7a74333036a9)
 
