@@ -59,13 +59,11 @@ Learning 是做得到?做不到? 若做不到，有沒有辦法加上一些條�
 
 ![04_handout_page-0017](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/c975fa9e-403c-4e94-beb1-8df95b381437)
 
-![04_handout_page-0017](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/1344c839-db32-4008-b7e0-01d925823db6)
-
 3. 將Hoeffding's equality套用進來
    - $E_{out}$ : out-of-sample error
    - $E_{in}$ : in-sample error
    - $\Pr[|E_{in}(h) - E_{out}(h)| \geq \varepsilon] \leq 2\exp(-2\varepsilon^2 N)$      
-   - Hoeffding's equality 告訴我們，當 $E_{in}$ 和 $E_{out}$ 很接近，且$E_{in}$都很小，那麼 $E_{out}$ 就很小。 $E_{out}$ 很小就代表如果資料繼續從 $P$ 產生出來的話， $h$ 和 $f$ 會很接近。
+   - Hoeffding's equality 告訴我們，當 $E_{in}$ 和 $E_{out}$ 很接近，且 $E_{in}$ 都很小，那麼 $E_{out}$ 就很小。 $E_{out}$ 很小就代表如果資料繼續從 $P$ 產生出來的話， $h$ 和 $f$ 會很接近。
 
 ![04_handout_page-0018](https://github.com/FionaYuY/Machine-Learning-Foundations-I/assets/151610467/78dbe326-89c4-40af-ad77-31e8ddef2347)
 
